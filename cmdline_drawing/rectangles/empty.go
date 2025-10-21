@@ -4,7 +4,7 @@ package rectangles
 // Zeichnet ein Rechteck mit diesen Seitenlängen auf der Konsole.
 // Der Rand des Rechtecks soll aus `#`-Zeichen bestehen, der Innenraum soll leer sein.
 func DrawEmptyRectangle(height, width int) {
-	// TODO
+	DrawRectangle(height, width, " ", "#")
 }
 
 // REMARKS
