@@ -8,6 +8,17 @@ package strings
 // passende öffnende Klammer gegeben hat.
 // Die Funktion soll true liefern, falls der String korrekt geklammert ist.
 func CheckParentheses(s string) bool {
-	//TDO
-	return false
+	count := 0
+	for _, k := range s {
+		if k == '(' {
+			count++
+		} else if k == ')' {
+			count--
+		}
+		if count < 0 {
+			return false
+		}
+	}
+	return count == 0
+
 }
