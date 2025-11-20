@@ -6,11 +6,17 @@ func MinList(nums []int) int {
 	if len(nums) == 0 {
 		return 0
 	}
-	min := nums[0]           // starte mit dem ersten Element
-	for _, n := range nums { // gehe jedes Element durch
-		if n < min { // wenn ein kleineres gefunden wird
-			min = n // merke es als neues Minimum
+
+	min := nums[0]           //Position 0
+	for _, n := range nums { //ganze Liste durchgehen
+		if n < min {
+			min = n
 		}
 	}
-	return min // am Ende: kleinstes Element
+	return min
 }
+
+//func MinList (nums [] int) int
+// nums []int → die Funktion bekommt eine Liste (Slice) von int-Werten,
+// nums ist der Name der Variablen
+//[]int = Type: Slice von ganzen Zahlen
