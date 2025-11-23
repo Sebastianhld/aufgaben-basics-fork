@@ -9,16 +9,16 @@ package strings
 // Die Funktion soll true liefern, falls der String korrekt geklammert ist.
 func CheckParentheses(s string) bool {
 	count := 0
-	for _, k := range s {
-		if k == '(' {
+	for _, z := range s {
+		switch z {
+		case '(':
 			count++
-		} else if k == ')' {
+		case ')':
 			count--
-		}
-		if count < 0 {
-			return false
+			if count < 0 {
+				return false
+			}
 		}
 	}
 	return count == 0
-
 }
